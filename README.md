@@ -56,34 +56,49 @@
 - F10 눌러 재부팅
 ```
 #### 2. nvidia 외장 그래픽 사용할 경우
+
+하단의 링크를 눌러서 그래픽 드라이버 다운로드  
+
+[다운로드](http://www.nvidia.co.kr/Download/index.aspx?lang=kr "다운로드")
+
+터미널을 실행시킨 후 입력
 ```
-- 그래픽 드라이버 다운로드
-  http://www.nvidia.co.kr/Download/index.aspx?lang=kr
-- 터미널 실행
-- sudo gedit /etc/modprobe.d/blacklist.conf
-- blacklist amd76x_edac #this might not be required for x86 32 bit users.
-  blacklist vga16fb
-  blacklist nouveau
-  blacklist rivafb
-  blacklist nvidiafb
-  blacklist rivatv
-  저장 후 닫기
-- 터미널에 명령어 입력 
-  sudo apt-get remove --purge nvidia*
-- 새로운 터미널을 열어 명령어 입력 (ctrl + art + f1)
-  sudo service lightdm stop
-- 다운로드 받은 파일을 실행 가능한 상태로 변경
-  chmod +x NVIDIA-Linux-x86_64-361.42.run
-- 다운받은 폴더로 들어가 실행
-  sudo ./NVIDIA-Linux-x86_64-367.35.run
-- 설치 끝나면 디스플레이 매니저를 시작
-  sudo service lightdm start
-  그래픽으로 전환(ctrl + alt + f7)
-- 설치 됐는지 확인
-  nvidia-smi
-  nvidia-settings
+sudo gedit /etc/modprobe.d/blacklist.conf
 ```
----
+아래의 문구를 마지막에 추가 후 저장
+```
+blacklist amd76x_edac #this might not be required for x86 32 bit users.
+blacklist vga16fb
+blacklist nouveau
+blacklist rivafb
+blacklist nvidiafb
+blacklist rivatv
+```
+터미널에 명령어 입력 
+```
+sudo apt-get remove --purge nvidia*
+```
+새로운 터미널을 열어 명령어 입력 (ctrl + art + f1)
+```
+sudo service lightdm stop
+```
+다운로드 받은 파일을 실행 가능한 상태로 변경
+```
+chmod +x NVIDIA-Linux-x86_64-361.42.run
+```
+다운받은 폴더로 들어가 실행
+```
+sudo ./NVIDIA-Linux-x86_64-367.35.run
+```
+설치 끝나면 디스플레이 매니저를 시작
+```
+sudo service lightdm start
+```
+그래픽으로 전환(ctrl + alt + f7) 후 설치 됐는지 확인
+```
+nvidia-smi
+nvidia-settings
+```
 # ATOM 설치
 [다운로드](https://atom.io "다운로드")
 # pycharm(community version) 설치
