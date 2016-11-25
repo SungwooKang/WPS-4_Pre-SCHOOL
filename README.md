@@ -1,5 +1,5 @@
-## 멀티 부팅 설치하기
----
+# 멀티 부팅 설치하기
+
 #### 1. 우분투 16.04 다운로드
 ```
 - 하단의 링크를 클릭 후 모든 바를 0으로 세팅 후 OS 이미지 파일 다운로드  
@@ -46,12 +46,9 @@
 - 재부팅 버튼 누르고 재빨리 USB를 뺀 후 재부팅
 ```
 # 설치 끝
----
 이면 좋겠지만 위의 방법으로 정상적으로 설치하신 분은 몇 안 될거라고 예상합니다. 이는 ***노트북 제조사마다의 차이 + 노트북 모델 + 외장그래픽*** 등의 이유로 에러가 발생하기 때문입니다. 
+# 에러 해결하기
 
----
-## 에러 해결하기
----
 #### 1. Install Ubuntu 클릭시 재부팅이 되는 경우 
 ```
 - 키보드로 Install Ubuntu에 커서를 올린 후 e 키를 누름
@@ -87,17 +84,17 @@
   nvidia-settings
 ```
 ---
-## ATOM 설치
+# ATOM 설치
 [다운로드](https://atom.io "다운로드")
-## pycharm(community version) 설치
+# pycharm(community version) 설치
 [다운로드](https://www.jetbrains.com/pycharm "다운로드")
-## pycharm 실행
+# pycharm 실행
 ```
 - 설치한 폴더로 들어감
 - bin 폴더로 들어감
 - ./pycharm.sh
 ```
-## 조금 더 쉽게 pycharm 실행
+# 조금 더 쉽게 pycharm 실행
 ```
 vi ~/.bashrc
 ```
@@ -108,13 +105,13 @@ alias pycharm="~/다운로드/pycharm-community-2016.2.3/bin/pycharm.sh"
 ```
 source ~/.bashrc
 ```
-## apt-get 업그레이드 및 git 설치
+# apt-get 업그레이드 및 git 설치
 ```
 sudo apt-get update
 sudo apt-get upgrade
 sudo apt-get install git
 ```
-## pyenv 설치
+# pyenv 설치
 #### 1. Install pyenv
 ```
 curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash
