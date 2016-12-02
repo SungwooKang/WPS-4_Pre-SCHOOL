@@ -43,7 +43,7 @@
 - 남은 공간을 더블 클릭
 - 주파티션, 시작, EXT4 저널링 파일 시스템, / 선택
 - 계속 다음 눌러 설치 완료
-- 재부팅 버튼 누르고 재빨리 USB를 뺀 후 재부팅
+- 재부팅 버튼 누르고 USB를 뺀 후 재부팅
 ```
 # 설치 끝
 이면 좋겠지만 위의 방법으로 정상적으로 설치하신 분은 몇 안 될거라고 예상합니다. 이는 ***노트북 제조사마다의 차이 + 노트북 모델 + 외장그래픽*** 등의 이유로 에러가 발생하기 때문입니다. 
@@ -82,11 +82,11 @@ sudo apt-get remove --purge nvidia*
 ```
 sudo service lightdm stop
 ```
-다운로드 받은 파일을 실행 가능한 상태로 변경
+다운로드 받은 파일을 실행 가능한 상태로 변경(example)
 ```
 chmod +x NVIDIA-Linux-x86_64-361.42.run
 ```
-다운받은 폴더로 들어가 실행
+다운받은 폴더로 들어가 실행(example)
 ```
 sudo ./NVIDIA-Linux-x86_64-367.35.run
 ```
@@ -98,52 +98,4 @@ sudo service lightdm start
 ```
 nvidia-smi
 nvidia-settings
-```
-# ATOM 설치
-[다운로드](https://atom.io "다운로드")
-# pycharm(community version) 설치
-[다운로드](https://www.jetbrains.com/pycharm "다운로드")
-# pycharm 실행
-```
-- 설치한 폴더로 들어감
-- bin 폴더로 들어감
-- ./pycharm.sh
-```
-# 조금 더 쉽게 pycharm 실행
-```
-vi ~/.bashrc
-```
-마지막줄에 아래 문장 추가 후 저장
-```python
-alias pycharm="~/다운로드/pycharm-community-2016.2.3/bin/pycharm.sh"
-```
-```
-source ~/.bashrc
-```
-# apt-get 업그레이드 및 git 설치
-```
-sudo apt-get update
-sudo apt-get upgrade
-sudo apt-get install git
-```
-# pyenv 설치
-#### 1. Install pyenv
-```
-curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash
-```
-#### 2. shell에 추가
-```
-vi ~/.bashrc
-```
-맨마지막에 아래 내용 붙여 넣고 저장
-```
-export PATH="~/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-```
-#### 3. 터미널 재시작
-터미널을 완전히 종료 혹은 아래 명령어 입력
-```
-source ~/.bashrc
-source ~/.bash_profile
 ```
